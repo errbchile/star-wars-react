@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import { useThemeStore } from "../store/store";
 
 export default function HomePage() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
+  const { isDarkMode, toggleIsDarkMode } = useThemeStore();
 
   return (
     <div
       className={`min-h-screen ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
       }`}
     >
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Header darkMode={isDarkMode} setDarkMode={toggleIsDarkMode} />
     </div>
   );
 }
