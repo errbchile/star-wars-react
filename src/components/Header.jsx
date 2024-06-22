@@ -1,9 +1,8 @@
 import vader from "../assets/vader.svg";
+import { useThemeStore } from "../store/store";
 
-function Header({ darkMode, setDarkMode }) {
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+function Header() {
+  const { isDarkMode, toggleIsDarkMode } = useThemeStore();
 
   return (
     <header className="bg-gray-100 dark:bg-gray-800 p-4">
@@ -29,8 +28,8 @@ function Header({ darkMode, setDarkMode }) {
                 id="theme-toggle"
                 type="checkbox"
                 className="sr-only"
-                checked={darkMode}
-                onChange={toggleDarkMode}
+                checked={isDarkMode}
+                onChange={toggleIsDarkMode}
               />
               <div className="w-10 h-4 bg-gray-300 rounded-full shadow-inner dark:bg-gray-600"></div>
               <div className="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition transform dark:translate-x-full"></div>
