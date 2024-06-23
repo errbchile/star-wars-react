@@ -6,14 +6,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useThemeEffect } from "./effects/useThemeEffect";
 
 function App() {
-  const queryClient = new QueryClient();
+  const client = new QueryClient();
 
   const { isDarkMode } = useThemeStore();
 
   useThemeEffect(isDarkMode);
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={client}>
       <BrowserRouter>
         <Routes>
           <Route element={<HomePage />} path="/" />

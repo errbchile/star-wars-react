@@ -3,11 +3,15 @@ import { useThemeStore } from "../store/store";
 export default function CharacterCard({ character }) {
   const { isDarkMode } = useThemeStore();
 
+  const themeClasses = isDarkMode
+    ? "bg-gray-800 text-white"
+    : "bg-white text-black";
+
+  const paragraphThemeClasses = isDarkMode ? "text-gray-300" : "text-gray-600";
+
   return (
     <div
-      className={`flex-shrink-0 w-60 shadow-md rounded-lg overflow-hidden ${
-        isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
-      }`}
+      className={`flex-shrink-0 w-60 shadow-md rounded-lg overflow-hidden ${themeClasses}`}
     >
       <img
         src={character?.image}
@@ -16,9 +20,7 @@ export default function CharacterCard({ character }) {
       />
       <div className="p-4">
         <h2 className="text-lg font-semibold">{character?.name}</h2>
-        <p className={`${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-          {character?.species}
-        </p>
+        <p className={paragraphThemeClasses}>{character?.species}</p>
       </div>
     </div>
   );
