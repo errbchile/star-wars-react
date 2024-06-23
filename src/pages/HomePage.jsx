@@ -14,7 +14,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col dark:bg-gray-900 dark:text-white bg-white text-black">
       <Header />
       <ImageCards />
-      <div className="flex flex-col md:flex-row flex-grow h-20">
+      <div className="flex flex-col md:flex-row flex-grow">
         <div className="w-full md:w-1/2 p-4">
           <CharactersSelection />
         </div>

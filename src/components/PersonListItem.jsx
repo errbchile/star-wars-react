@@ -8,7 +8,7 @@ const PersonListItem = ({ person }) => {
       <img
         src={person?.image}
         alt="Avatar"
-        className="h-10 w-10 rounded-full object-cover"
+        className="h-10 w-10 rounded-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
       />
       <span className="flex-1">
         {person?.name} ({person.species})
