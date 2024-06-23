@@ -21,3 +21,7 @@ npm install
 ```
 npm run dev
 ```
+
+# Live example
+
+[Click to see live example](https://main--edd-sw.netlify.app/)
