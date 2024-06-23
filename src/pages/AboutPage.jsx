@@ -1,22 +1,15 @@
+import React from "react";
 import Header from "../components/Header";
-import { useThemeStore } from "../store/themeStore";
 import darthVader from "../assets/darth-vader-ungry.jpg";
 import MasterYoda from "../assets/master-yoda-bg.png";
 
 export default function AboutPage() {
-  const { isDarkMode } = useThemeStore();
-
-  const themeClasses = isDarkMode
-    ? "bg-gray-900 text-white"
-    : "bg-white text-black";
-
-  const imageSrc = isDarkMode ? darthVader : MasterYoda;
-
   return (
-    <div className={`min-h-screen ${themeClasses}`}>
+    <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
       <Header />
-      <div className="flex fllex-grow justify-center h-20">
-        <img src={imageSrc} alt="bg" className="h-96" />
+      <div className="flex flex-grow justify-center h-20">
+        <img src={MasterYoda} alt="bg" className="h-96 dark:hidden object-cover" />
+        <img src={darthVader} alt="bg" className="h-96 hidden dark:block object-cover" />
       </div>
     </div>
   );
