@@ -1,8 +1,8 @@
 import Header from "../components/Header";
 import ImageCards from "../components/ImageCards";
 import { useThemeStore } from "../store/store";
-import darthVader from "../assets/darth-vader-bg.jpg";
-import MasterYoda from "../assets/master-yoda-bg.jpg";
+import darthVader from "../assets/darth-vader-bg.png";
+import MasterYoda from "../assets/master-yoda-bg.png";
 
 export default function HomePage() {
   const { isDarkMode } = useThemeStore();
