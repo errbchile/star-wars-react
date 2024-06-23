@@ -11,7 +11,7 @@ async function getImages() {
 // tanstack-query
 export const useCharactersList = () => {
   const response = useQuery({
-    queryKey: ["todos"],
+    queryKey: ["characters-list"],
     queryFn: getImages,
   });
 
