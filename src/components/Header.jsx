@@ -1,4 +1,3 @@
-import vader from "../assets/vader.svg";
 import { useThemeStore } from "../store/store";
 
 function Header() {
@@ -8,9 +7,7 @@ function Header() {
     <header className="bg-gray-100 dark:bg-gray-800 p-4">
       <nav className="container mx-auto flex justify-between items-center px-8">
         <div className="text-lg font-bold">
-          <a href="/">
-            <img src={vader} alt="Logo" className="h-8" />
-          </a>
+          <a href="/">LOGO</a>
         </div>
         <div className="flex items-center space-x-4">
           <a href="/" className="text-gray-900 dark:text-white">

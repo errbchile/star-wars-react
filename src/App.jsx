@@ -3,8 +3,11 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import { useEffect } from "react";
 import { useThemeStore } from "./store/store";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
+  const queryClient = new QueryClient();
+
   const { isDarkMode } = useThemeStore();
 
   useEffect(() => {
@@ -16,12 +19,14 @@ function App() {
   }, [isDarkMode]);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<HomePage />} path="/" />
-        <Route element={<AboutPage />} path="/about" />
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<HomePage />} path="/" />
+          <Route element={<AboutPage />} path="/about" />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 
