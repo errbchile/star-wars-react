@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import { useThemeStore } from "../store/store";
+import { useThemeStore } from "../store/themeStore";
 import darthVader from "../assets/darth-vader-ungry.jpg";
 import MasterYoda from "../assets/master-yoda-bg.png";
 

@@ -1,7 +1,9 @@
-import { useThemeStore } from "../store/store";
+import { useCharactersSelectedStore } from "../store/charactersSelectionStore";
+import { useThemeStore } from "../store/themeStore";
 
 export default function CharacterCard({ character }) {
   const { isDarkMode } = useThemeStore();
+  const { appPerson } = useCharactersSelectedStore();
 
   const themeClasses = isDarkMode
     ? "bg-gray-800 text-white"
@@ -9,9 +11,14 @@ export default function CharacterCard({ character }) {
 
   const paragraphThemeClasses = isDarkMode ? "text-gray-300" : "text-gray-600";
 
+  const handleClick = () => {
+    appPerson({ ...character });
+  };
+
   return (
     <div
-      className={`flex-shrink-0 w-60 shadow-md rounded-lg overflow-hidden ${themeClasses}`}
+      onClick={handleClick}
+      className={`cursor-pointer flex-shrink-0 w-60 shadow-md rounded-lg overflow-hidden ${themeClasses}`}
     >
       <img
         src={character?.image}
