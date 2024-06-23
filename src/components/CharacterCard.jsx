@@ -10,14 +10,14 @@ export default function CharacterCard({ character }) {
       }`}
     >
       <img
-        src={character.image}
-        alt={character.name}
+        src={character?.image}
+        alt={character?.name}
         className="w-full h-40 object-cover"
       />
       <div className="p-4">
-        <h2 className="text-lg font-semibold">{character.name}</h2>
+        <h2 className="text-lg font-semibold">{character?.name}</h2>
         <p className={`${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-          {character.species}
+          {character?.species}
         </p>
       </div>
     </div>
