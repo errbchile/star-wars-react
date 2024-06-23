@@ -9,7 +9,9 @@ const CharactersSelection = () => {
   return (
     <>
       {isListEmpty && (
-        <h2 className="text-center dark:text-gray-300">Select a Character</h2>
+        <h2 className="text-center dark:text-gray-300">
+          Select a Character 👆
+        </h2>
       )}
 
       {!isListEmpty && (
