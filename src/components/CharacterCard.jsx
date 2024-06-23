@@ -12,7 +12,7 @@ export default function CharacterCard({ character }) {
       <img
         src={character?.image}
         alt={character?.name}
-        className="w-full h-40 object-cover"
+        className="w-full h-40 object-cover transform transition duration-300 hover:scale-110"
       />
       <div className="p-4">
         <h2 className="text-lg font-semibold">{character?.name}</h2>
