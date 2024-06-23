@@ -1,5 +1,7 @@
 import Header from "../components/Header";
 import { useThemeStore } from "../store/store";
+import darthVader from "../assets/darth-vader-bg.jpg";
+import MasterYoda from "../assets/master-yoda-bg.jpg";
 
 export default function AboutPage() {
   const { isDarkMode } = useThemeStore();
@@ -11,7 +13,13 @@ export default function AboutPage() {
       }`}
     >
       <Header />
-      ABOUT PAGE
+      <div className=" flex fllex-grow justify-center h-20">
+        <img
+          src={isDarkMode ? darthVader : MasterYoda}
+          alt="bg"
+          className="h-72"
+        />
+      </div>
     </div>
   );
 }
