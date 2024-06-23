@@ -1,4 +1,5 @@
 import { useCharactersSelectedStore } from "../store/charactersSelectionStore";
+import RemoveIcon from "./icons/RemoveIcon";
 
 const PersonListItem = ({ person }) => {
   const { removePersonById } = useCharactersSelectedStore();
@@ -15,9 +16,9 @@ const PersonListItem = ({ person }) => {
       </span>
       <button
         onClick={() => removePersonById(person.id)}
-        className="text-red-500"
+        className="text-red-500 transform transition duration-300 ease-in-out hover:rotate-90"
       >
-        x
+        <RemoveIcon />
       </button>
     </li>
   );
