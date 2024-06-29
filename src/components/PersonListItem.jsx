@@ -15,6 +15,7 @@ const PersonListItem = ({ person }) => {
         {person?.name} ({person.species})
       </span>
       <button
+        aria-label="remove character"
         onClick={() => removePersonById(person.id)}
         className="text-red-500 transform transition duration-300 ease-in-out hover:rotate-90"
       >
