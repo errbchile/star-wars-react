@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-import darthVader from "../assets/darth-vader-ungry.jpg";
-import MasterYoda from "../assets/master-yoda-bg.png";
+import darthVader from "../assets/darth-vader-ungry.avif";
+import MasterYoda from "../assets/master-yoda-bg.avif";
 
 export default function AboutPage() {
   return (

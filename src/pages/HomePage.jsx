@@ -1,8 +1,8 @@
 import Header from "../components/Header";
 import ImageCards from "../components/ImageCards";
 import { useThemeStore } from "../store/themeStore";
-import darthVader from "../assets/darth-vader-ungry.jpg";
-import masterYoda from "../assets/master-yoda-bg.png";
+import darthVader from "../assets/darth-vader-ungry.avif";
+import masterYoda from "../assets/master-yoda-bg.avif";
 import CharactersSelection from "../components/CharactersSelection";
 
 export default function HomePage() {
